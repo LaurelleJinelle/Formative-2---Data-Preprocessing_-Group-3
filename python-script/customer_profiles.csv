@@ -1,0 +1,6 @@
+person,engagement_score,purchase_interest_score,num_transactions,total_spent,avg_spent,avg_rating,recency_days,social_media_platform,review_sentiment
+wilsons,74,4.9,0.0,0.0,0.0,0.0,-1.0,LinkedIn,Positive
+Leny,82,4.8,2.0,734.0,367.0,4.35,10.0,Twitter,Neutral
+Emmanuel,96,1.6,2.0,566.0,283.0,3.6,104.0,Facebook,Positive
+jinelle,89,2.6,2.0,444.0,222.0,2.8,34.0,Twitter,Positive
+unauthorized,92,2.3,0.0,0.0,0.0,0.0,-1.0,Twitter,Neutral
