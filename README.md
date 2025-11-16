@@ -148,6 +148,41 @@ python "prediction script.py" sample-images/neutral.jpg sample-audio/Wilsons-app
 
 ---
 
+## Consolidated requirements & model downloads
+
+If you want a single place to install the project dependencies and pre-download large model weights (so first runs are fast), follow these steps.
+
+1) Create and activate a virtual environment (PowerShell):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+pip install -r requirements.txt
+```
+
+2) Pre-download DeepFace weights (optional but recommended):
+
+DeepFace downloads model weights the first time a model is used. To avoid long waits during a demo, pre-download them:
+
+```powershell
+# This script will download the Facenet model weights to DeepFace's cache directory
+python tools/download_deepface_models.py --models Facenet
+```
+
+DeepFace stores weights under the default cache path (usually `~/.deepface/weights/`). You can override the location by setting the `DEEPFACE_HOME` environment variable before running the downloader.
+
+Example (PowerShell):
+
+```powershell
+$env:DEEPFACE_HOME = 'C:\deepface_cache'
+python tools/download_deepface_models.py --models Facenet
+```
+
+This ensures the models are available offline and reduces cold-start time when you run the notebooks or the CLI.
+
+
+
 ## Three Models Explained
 
 ### Model 1: Facial Recognition
